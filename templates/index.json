@@ -15,14 +15,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "Rooted",
             "heading_size": "h0"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "Explore the apps and merch that could benefit your life",
             "text_style": "body"
           }
         },
@@ -55,6 +55,57 @@
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
         "show_text_below": false
+      }
+    },
+    "tsapb_fc33c254_ERmbw7": {
+      "type": "tsapb-fc33c254",
+      "blocks": {
+        "announcement_N34aC8": {
+          "type": "announcement",
+          "settings": {
+            "title": "Announcement text",
+            "text_link": "",
+            "text_alternative_font": false,
+            "text_font": "sans_serif_n4"
+          }
+        },
+        "announcement_rDKCnd": {
+          "type": "announcement",
+          "settings": {
+            "title": "Announcement text",
+            "text_link": "",
+            "text_alternative_font": false,
+            "text_font": "sans_serif_n4"
+          }
+        },
+        "announcement_HxNawM": {
+          "type": "announcement",
+          "settings": {
+            "title": "Announcement text",
+            "text_link": "",
+            "text_alternative_font": false,
+            "text_font": "sans_serif_n4"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_N34aC8",
+        "announcement_rDKCnd",
+        "announcement_HxNawM"
+      ],
+      "name": "❤️ Square: Rotating Text Bar",
+      "settings": {
+        "rotating_bar_layout": "auto-rotating",
+        "rotating_bar_speed": "30",
+        "rotating_bar_height": "medium",
+        "text_size": "16",
+        "text_style": "regular",
+        "text_color": "#ffffff",
+        "section_background": "color",
+        "rotating_bar_background": "#222222",
+        "section_gradient": "linear-gradient(90deg, rgba(254, 217, 81, 1), rgba(255, 70, 199, 1) 100%)",
+        "vertical_margin": 0,
+        "vertical_margin_mobile": 0
       }
     },
     "rich_text": {
@@ -294,6 +345,7 @@
   },
   "order": [
     "image_banner",
+    "tsapb_fc33c254_ERmbw7",
     "rich_text",
     "featured_product_bUpqbn",
     "featured_collection",
