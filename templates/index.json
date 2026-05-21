@@ -63,7 +63,7 @@
         "announcement_N34aC8": {
           "type": "announcement",
           "settings": {
-            "title": "Announcement text",
+            "title": "New App Available",
             "text_link": "",
             "text_alternative_font": false,
             "text_font": "sans_serif_n4"
@@ -72,7 +72,7 @@
         "announcement_rDKCnd": {
           "type": "announcement",
           "settings": {
-            "title": "Announcement text",
+            "title": "New Merch Available",
             "text_link": "",
             "text_alternative_font": false,
             "text_font": "sans_serif_n4"
@@ -81,7 +81,7 @@
         "announcement_HxNawM": {
           "type": "announcement",
           "settings": {
-            "title": "Announcement text",
+            "title": "10% OFF your first purchase",
             "text_link": "",
             "text_alternative_font": false,
             "text_font": "sans_serif_n4"
