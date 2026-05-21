@@ -91,9 +91,9 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "collection": "all",
+        "collection": "frontpage",
         "products_to_show": 8,
-        "title": "Featured products",
+        "title": "Featured APPs",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
