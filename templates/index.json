@@ -44,7 +44,7 @@
         "button"
       ],
       "settings": {
-        "image_2": "shopify://shop_images/coding-on-laptop.jpg",
+        "image": "shopify://shop_images/tablet-lays-on-a-white-table-with-screen-lit-by-app-icons.jpg",
         "image_overlay_opacity": 50,
         "image_height": "medium",
         "image_behavior": "ambient",
@@ -57,31 +57,31 @@
         "show_text_below": false
       }
     },
-    "tsapb_fc33c254_ERmbw7": {
+    "tsapb_fc33c254_L6Ht98": {
       "type": "tsapb-fc33c254",
       "blocks": {
-        "announcement_N34aC8": {
+        "announcement_mQNg7y": {
           "type": "announcement",
           "settings": {
-            "title": "New App Available",
+            "title": "New Apps Coming Soon",
             "text_link": "",
             "text_alternative_font": false,
             "text_font": "sans_serif_n4"
           }
         },
-        "announcement_rDKCnd": {
+        "announcement_krpzgp": {
           "type": "announcement",
           "settings": {
-            "title": "New Merch Available",
+            "title": "New Apps Coming Soon",
             "text_link": "",
             "text_alternative_font": false,
             "text_font": "sans_serif_n4"
           }
         },
-        "announcement_HxNawM": {
+        "announcement_ULHqr8": {
           "type": "announcement",
           "settings": {
-            "title": "10% OFF your first purchase",
+            "title": "New Apps Coming Soon",
             "text_link": "",
             "text_alternative_font": false,
             "text_font": "sans_serif_n4"
@@ -89,9 +89,9 @@
         }
       },
       "block_order": [
-        "announcement_N34aC8",
-        "announcement_rDKCnd",
-        "announcement_HxNawM"
+        "announcement_mQNg7y",
+        "announcement_krpzgp",
+        "announcement_ULHqr8"
       ],
       "name": "❤️ Square: Rotating Text Bar",
       "settings": {
@@ -103,7 +103,7 @@
         "text_color": "#ffffff",
         "section_background": "color",
         "rotating_bar_background": "#222222",
-        "section_gradient": "linear-gradient(90deg, rgba(254, 217, 81, 1), rgba(255, 70, 199, 1) 100%)",
+        "section_gradient": "linear-gradient(to right, #fed951, #ff46c7)",
         "vertical_margin": 0,
         "vertical_margin_mobile": 0
       }
@@ -239,7 +239,7 @@
   },
   "order": [
     "image_banner",
-    "tsapb_fc33c254_ERmbw7",
+    "tsapb_fc33c254_L6Ht98",
     "rich_text",
     "featured_product_bUpqbn",
     "featured_collection"
