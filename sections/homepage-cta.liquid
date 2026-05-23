@@ -1,0 +1,125 @@
+<section class="homepage-cta section-{{ section.id }}-padding">
+  <div class="page-width homepage-cta__wrapper">
+    <div class="homepage-cta__copy">
+      <p class="homepage-cta__eyebrow">Join the Indie Fleet.</p>
+      <h2 class="homepage-cta__title">Get weekly updates on new digital assets, hardware drops, and mental models for solo developer mastery.</h2>
+    </div>
+
+    <div class="homepage-cta__form-wrapper">
+      {% form 'customer', class: 'homepage-cta__newsletter' %}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <div class="homepage-cta__field">
+          <label class="homepage-cta__label" for="HomepageCTANewsletter-{{ section.id }}">Email address</label>
+          <input id="HomepageCTANewsletter-{{ section.id }}" name="contact[email]" type="email" placeholder="mastery@independent.dev" required class="homepage-cta__input">
+          <button type="submit" class="homepage-cta__submit">EXECUTE</button>
+        </div>
+      {% endform %}
+    </div>
+  </div>
+</section>
+
+<style>
+.homepage-cta {
+  background: linear-gradient(180deg, #d5f7ff 0%, #daf7ff 100%);
+  color: #07101e;
+}
+.homepage-cta__wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(18rem, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+.homepage-cta__eyebrow {
+  margin: 0 0 0.75rem;
+  color: #0f2335;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+.homepage-cta__title {
+  margin: 0;
+  font-size: clamp(2.1rem, 3vw, 3.8rem);
+  line-height: 1.05;
+  max-width: 44rem;
+}
+.homepage-cta__field {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.85rem;
+  align-items: stretch;
+}
+.homepage-cta__label {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.homepage-cta__input {
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  padding: 1.2rem 1.4rem;
+  background: #ffffff;
+  color: #07101e;
+  font-size: 1rem;
+  box-shadow: inset 0 0 0 1px rgba(7,16,30,0.08);
+}
+.homepage-cta__input::placeholder {
+  color: rgba(7,16,30,0.5);
+}
+.homepage-cta__submit {
+  border: none;
+  border-radius: 999px;
+  padding: 0 2rem;
+  min-width: 8rem;
+  background: #07101e;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+@media (max-width: 900px) {
+  .homepage-cta__wrapper {
+    grid-template-columns: 1fr;
+  }
+  .homepage-cta__field {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Homepage CTA",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-4"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 140,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 140,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 40
+    }
+  ]
+}
+{% endschema %}

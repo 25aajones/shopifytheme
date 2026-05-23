@@ -1,14 +1,23 @@
 <section class="homepage-testimonials section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
   <div class="page-width homepage-testimonials__grid">
     <div class="homepage-testimonials__content">
+      <div class="homepage-testimonials__eyebrow">Feedback</div>
       <h2 class="homepage-testimonials__title">Trusted by Solo Architects.</h2>
       <div class="testimonial-card">
+        <div class="testimonial-card__meta">
+          <span class="testimonial-card__avatar">MK</span>
+          <span class="testimonial-card__name">Marcus Knight</span>
+        </div>
         <p class="testimonial-card__quote">“The DevFlow license paid for itself in a week. The minimalist merch is just a bonus — it’s become my uniform for shipping code.”</p>
-        <p class="testimonial-card__author"><strong>Marcus Knight</strong>, Full-stack Indie Maker</p>
+        <p class="testimonial-card__author">Full-stack Indie Maker</p>
       </div>
       <div class="testimonial-card testimonial-card--secondary">
+        <div class="testimonial-card__meta">
+          <span class="testimonial-card__avatar">SL</span>
+          <span class="testimonial-card__name">Sarah Lin</span>
+        </div>
         <p class="testimonial-card__quote">“Finally a brand that gets the aesthetic of deep work. No bloat, just high-quality assets for the digital craft.”</p>
-        <p class="testimonial-card__author"><strong>Sarah Lin</strong>, Design Founder</p>
+        <p class="testimonial-card__author">Design Founder</p>
       </div>
     </div>
 
@@ -29,6 +38,13 @@
   gap: 2rem;
   align-items: stretch;
 }
+.homepage-testimonials__eyebrow {
+  margin: 0 0 0.8rem;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.85rem;
+}
 .homepage-testimonials__title {
   margin: 0 0 1.5rem;
   font-size: clamp(2.5rem, 4vw, 3.75rem);
@@ -40,6 +56,29 @@
   border-radius: 1.75rem;
   padding: 2rem;
   margin-bottom: 1rem;
+}
+.testimonial-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.1rem;
+}
+.testimonial-card__avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+.testimonial-card__name {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+  font-weight: 700;
 }
 .testimonial-card--secondary {
   margin-top: 1rem;
@@ -55,6 +94,7 @@
   font-size: 0.95rem;
 }
 .stat-card {
+  position: relative;
   display: grid;
   gap: 1.5rem;
   padding: 2rem;
@@ -62,8 +102,10 @@
   align-content: center;
   justify-items: center;
   text-align: center;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.05);
+  background-image: radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px);
+  background-size: 14px 14px;
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: 2rem;
 }
 .stat-card__value {

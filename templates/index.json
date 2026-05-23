@@ -49,8 +49,8 @@
         "subheading": "A curated ecosystem of software tools built for modern workflow mastery.",
         "button_label": "View all systems",
         "button_link": "shopify://collections/all",
-        "button_position": "bottom",
-        "button_alignment": "left",
+        "button_position": "top",
+        "button_alignment": "right",
         "grid_layout": "three",
         "card_border_radius": 24,
         "card_hover_effect": "lift",
@@ -63,8 +63,11 @@
     "best_sellers": {
       "type": "featured-collection",
       "settings": {
-        "title": "Best Sellers",
+        "title": "Physical Assets",
         "heading_size": "h2",
+        "description": "Uniform for the independent master. Minimalist aesthetics for focused execution.",
+        "show_description": true,
+        "description_style": "subtitle",
         "collection": "all",
         "products_to_show": 4,
         "columns_desktop": 4,
@@ -89,36 +92,11 @@
       }
     },
     "join_fleet": {
-      "type": "newsletter",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Join the Indie Fleet.",
-            "heading_size": "h1"
-          }
-        },
-        "paragraph": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Get weekly updates on new digital assets, hardware drops, and mental models for solo developer mastery.</p>"
-          }
-        },
-        "email_form": {
-          "type": "email_form",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "heading",
-        "paragraph",
-        "email_form"
-      ],
+      "type": "homepage-cta",
       "settings": {
-        "color_scheme": "scheme-2",
-        "full_width": true,
+        "color_scheme": "scheme-4",
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 40
       }
     }
   },
