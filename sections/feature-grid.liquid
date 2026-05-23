@@ -1,0 +1,369 @@
+{% comment %}
+  A flexible feature grid section for homepage content.
+  Add custom heading, subheading, button, and feature cards with an icon, text, and CTA.
+{% endcomment %}
+
+<section class="feature-grid section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    <div class="feature-grid__intro feature-grid__intro--button-{{ section.settings.button_position }}">
+      {%- if section.settings.button_label != blank and section.settings.button_link != blank and section.settings.button_position == 'top' -%}
+        <a href="{{ section.settings.button_link }}" class="button button--primary feature-grid__button feature-grid__button--{{ section.settings.button_alignment }}">{{ section.settings.button_label }}</a>
+      {%- endif -%}
+
+      {% if section.settings.heading != blank %}
+        <h2 class="section-heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+
+      {% if section.settings.subheading != blank %}
+        <div class="rte feature-grid__description">{{ section.settings.subheading }}</div>
+      {% endif %}
+
+      {%- if section.settings.button_label != blank and section.settings.button_link != blank and section.settings.button_position != 'top' -%}
+        <a href="{{ section.settings.button_link }}" class="button button--primary feature-grid__button feature-grid__button--{{ section.settings.button_alignment }}">{{ section.settings.button_label }}</a>
+      {%- endif -%}
+    </div>
+
+    <div class="grid grid--1-col{% if section.settings.grid_layout == 'two' %} grid--2-col-desktop{% elsif section.settings.grid_layout == 'three' %} grid--2-col-tablet grid--3-col-desktop{% endif %} feature-grid__cards">
+      {%- for block in section.blocks -%}
+        <article class="feature-grid__card feature-grid__card--hover-{{ section.settings.card_hover_effect }} feature-grid__card--content-{{ section.settings.card_content_alignment }} feature-grid__card--icon-{{ section.settings.icon_position }}">
+          {%- if block.settings.icon != blank -%}
+            <div class="feature-grid__icon feature-grid__icon--{{ section.settings.icon_shape }}">
+              <img
+                src="{{ block.settings.icon | image_url: width: 120 }}"
+                alt="{{ block.settings.icon.alt | escape }}"
+                loading="lazy"
+              >
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.heading != blank -%}
+            <h3 class="feature-grid__card-heading">{{ block.settings.heading }}</h3>
+          {%- endif -%}
+
+          {%- if block.settings.text != blank -%}
+            <div class="feature-grid__card-text rte">{{ block.settings.text }}</div>
+          {%- endif -%}
+
+          {%- if block.settings.link != blank and block.settings.link_label != blank -%}
+            <a href="{{ block.settings.link }}" class="link feature-grid__card-link">{{ block.settings.link_label }}</a>
+          {%- endif -%}
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<style>
+  .feature-grid__intro {
+    display: grid;
+    gap: 1rem;
+    max-width: 62rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .feature-grid__intro--button-top {
+    margin-bottom: 2rem;
+  }
+
+  .feature-grid__button {
+    justify-self: start;
+    transition: transform var(--duration-short) ease, box-shadow var(--duration-short) ease;
+  }
+
+  .feature-grid__button--left {
+    justify-self: start;
+  }
+
+  .feature-grid__button--center {
+    justify-self: center;
+  }
+
+  .feature-grid__button--right {
+    justify-self: end;
+  }
+
+  .feature-grid__cards {
+    gap: 1.5rem;
+  }
+
+  .feature-grid__card {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: {{ section.settings.card_border_radius }}px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: transform var(--duration-short) ease, box-shadow var(--duration-short) ease;
+  }
+
+  .feature-grid__card--content-center {
+    text-align: center;
+  }
+
+  .feature-grid__card--content-right {
+    text-align: right;
+  }
+
+  .feature-grid__card--icon-left {
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+
+  .feature-grid__card--icon-right {
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    direction: rtl;
+  }
+
+  .feature-grid__card--icon-right .feature-grid__icon {
+    direction: ltr;
+  }
+
+  .feature-grid__icon {
+    width: 4rem;
+    min-height: 4rem;
+    display: grid;
+    place-items: center;
+  }
+
+  .feature-grid__icon img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .feature-grid__icon--square img {
+    border-radius: 0;
+  }
+
+  .feature-grid__icon--rounded img {
+    border-radius: 1rem;
+  }
+
+  .feature-grid__icon--circle img {
+    border-radius: 999px;
+  }
+
+  .feature-grid__card-heading {
+    margin: 0;
+  }
+
+  .feature-grid__card--hover-lift:hover {
+    transform: translateY(-0.6rem);
+    box-shadow: 0 2rem 2.5rem rgba(0, 0, 0, 0.08);
+  }
+
+  .feature-grid__card--hover-scale:hover {
+    transform: scale(1.02);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08);
+  }
+
+  .feature-grid__card--hover-shadow:hover {
+    box-shadow: 0 1.2rem 2rem rgba(0, 0, 0, 0.12);
+  }
+
+  .feature-grid__card--hover-glow:hover {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 1.5rem 2.5rem rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-grid__card--hover-none:hover {
+    transform: none;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .feature-grid__card {
+      background: rgba(0, 0, 0, 0.4);
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Feature grid",
+  "max_blocks": 6,
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Build, promote, and grow your brand"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Use the feature grid to add flexible content cards to your homepage. Each card can include an icon, text, and a call to action."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link",
+      "default": "#"
+    },
+    {
+      "type": "select",
+      "id": "button_position",
+      "label": "Button position",
+      "default": "bottom",
+      "options": [
+        { "value": "top", "label": "Top" },
+        { "value": "bottom", "label": "Bottom" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "button_alignment",
+      "label": "Button alignment",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "grid_layout",
+      "label": "Card layout",
+      "default": "three",
+      "options": [
+        {
+          "value": "one",
+          "label": "One column"
+        },
+        {
+          "value": "two",
+          "label": "Two columns"
+        },
+        {
+          "value": "three",
+          "label": "Three columns"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Card corner radius",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "card_hover_effect",
+      "label": "Card hover effect",
+      "default": "lift",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "lift", "label": "Lift" },
+        { "value": "scale", "label": "Scale" },
+        { "value": "shadow", "label": "Shadow" },
+        { "value": "glow", "label": "Glow" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "card_content_alignment",
+      "label": "Card text alignment",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "icon_position",
+      "label": "Icon position",
+      "default": "top",
+      "options": [
+        { "value": "top", "label": "Top" },
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "icon_shape",
+      "label": "Icon shape",
+      "default": "rounded",
+      "options": [
+        { "value": "square", "label": "Square" },
+        { "value": "rounded", "label": "Rounded" },
+        { "value": "circle", "label": "Circle" }
+      ]
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-2"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature_card",
+      "name": "Feature card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Card icon"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Card heading",
+          "default": "Feature title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Card content",
+          "default": "Describe a feature, benefit, or special offer here."
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Card link"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "Card link label",
+          "default": "Read more"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature grid",
+      "blocks": [
+        {
+          "type": "feature_card"
+        },
+        {
+          "type": "feature_card"
+        },
+        {
+          "type": "feature_card"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

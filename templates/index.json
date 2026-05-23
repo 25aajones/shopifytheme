@@ -1,31 +1,31 @@
 {
   "sections": {
-    "image_banner": {
+    "hero": {
       "type": "image-banner",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "Software Meets Lifestyle.",
             "heading_size": "h0"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "<p>A curated ecosystem for the modern solo developer. High-performance software tools paired with premium minimalist merch designed for deep work.<\/p>",
             "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "Browse apps",
             "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_1": false,
+            "button_label_2": "Shop merch",
+            "button_link_2": "shopify://collections/all",
+            "button_style_secondary_2": true
           }
         }
       },
@@ -40,47 +40,71 @@
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-4",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
       }
     },
-    "rich_text": {
-      "type": "rich-text",
+    "featured_apps": {
+      "type": "feature-grid",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "devflow": {
+          "type": "feature_card",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "heading": "DevFlow Pro",
+            "text": "A distraction-free terminal environment with built-in Pomodoro and Git automation.",
+            "link": "shopify://collections/all",
+            "link_label": "Get license"
           }
         },
-        "text": {
-          "type": "text",
+        "metricnode": {
+          "type": "feature_card",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "heading": "MetricNode",
+            "text": "Real-time server monitoring visualized through a minimalist ASCII-style dashboard.",
+            "link": "shopify://collections/all",
+            "link_label": "Get license"
+          }
+        },
+        "schemagen": {
+          "type": "feature_card",
+          "settings": {
+            "heading": "SchemaGen",
+            "text": "Generate complex database architectures using simple Markdown syntax.",
+            "link": "shopify://collections/all",
+            "link_label": "Deploy now"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "devflow",
+        "metricnode",
+        "schemagen"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
+        "heading": "Featured Apps",
+        "subheading": "A curated set of developer tools built for modern solo workflows.",
+        "button_label": "View all systems",
+        "button_link": "shopify://collections/all",
+        "button_position": "bottom",
+        "button_alignment": "left",
+        "grid_layout": "three",
+        "card_border_radius": 24,
+        "card_hover_effect": "lift",
+        "card_content_alignment": "left",
+        "icon_position": "top",
+        "icon_shape": "rounded",
+        "color_scheme": "scheme-1"
       }
     },
-    "featured_collection": {
+    "best_sellers": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "Best Sellers",
         "heading_size": "h2",
         "collection": "all",
-        "products_to_show": 8,
+        "products_to_show": 4,
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
         "show_view_all": false,
@@ -94,100 +118,39 @@
         "padding_bottom": 36
       }
     },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "heading_size": "h1",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
+    "trusted": {
       "type": "multicolumn",
       "blocks": {
-        "column1": {
+        "testimonial": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "Trusted by Solo Architects.",
+            "text": "<p>“The DevFlow license paid for itself in a week. The minimalist merch is just a bonus — it’s become my uniform for shipping code.”<br><strong>Marcus Knight</strong>, Full-stack Indie Maker</p><p>“Finally a brand that gets the aesthetic of deep work. No bloat, just high-quality assets for the digital craft.”<br><strong>Sarah Lin</strong>, Design Founder</p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column2": {
+        "stat": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "99.9%",
+            "text": "<p>Uptime satisfaction across our community of solo makers.</p>",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column1",
-        "column2",
-        "column3"
+        "testimonial",
+        "stat"
       ],
       "settings": {
         "title": "",
         "heading_size": "h1",
-        "image_width": "third",
+        "image_width": "full",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
+        "columns_desktop": 2,
+        "column_alignment": "left",
         "background_style": "none",
         "button_label": "",
         "button_link": "",
@@ -197,14 +160,46 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "join_fleet": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join the Indie Fleet.",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Get weekly updates on new digital assets, hardware drops, and mental models for solo developer mastery.</p>"
+          }
+        },
+        "email_form": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email_form"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "image_banner",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "hero",
+    "featured_apps",
+    "best_sellers",
+    "trusted",
+    "join_fleet"
   ]
 }

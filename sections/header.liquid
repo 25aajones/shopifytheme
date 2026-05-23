@@ -232,9 +232,11 @@
           </localization-form>
         {%- endif -%}
       </div>
-      {% render 'header-search', input_id: 'Search-In-Modal' %}
+      {%- if section.settings.enable_search -%}
+        {% render 'header-search', input_id: 'Search-In-Modal' %}
+      {%- endif -%}
 
-      {%- if shop.customer_accounts_enabled -%}
+      {%- if shop.customer_accounts_enabled and section.settings.enable_account_icon -%}
         <a
           href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
           class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
@@ -270,7 +272,8 @@
         {%- endcase -%}
       {%- endfor -%}
 
-      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+      {%- if section.settings.enable_cart_icon -%}
+        <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
           {% if cart == empty %}
             <span class="svg-wrapper">{{'icon-cart-empty.svg' | inline_asset_content }}</span>
           {% else %}
@@ -286,6 +289,7 @@
           </div>
         {%- endif -%}
       </a>
+      {%- endif -%}
     </div>
   </header>
 </{{ header_tag }}>
@@ -548,6 +552,24 @@
       "id": "show_line_separator",
       "default": true,
       "label": "t:sections.header.settings.show_line_separator.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_search",
+      "default": true,
+      "label": "Show search icon"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_cart_icon",
+      "default": true,
+      "label": "Show cart icon"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_account_icon",
+      "default": true,
+      "label": "Show account icon"
     },
     {
       "type": "header",
