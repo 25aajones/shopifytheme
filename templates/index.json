@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
@@ -6,26 +15,43 @@
         "heading": {
           "type": "heading",
           "settings": {
+<<<<<<< HEAD
             "heading": "Software Meets Lifestyle.",
+=======
+            "heading": "Apps That Actually Help",
+>>>>>>> ca76577ca19cdef7217b8751b793dfb2922440f1
             "heading_size": "h0"
           }
         },
         "text": {
           "type": "text",
           "settings": {
+<<<<<<< HEAD
             "text": "<p>A curated ecosystem for the modern solo developer. High-performance software tools paired with premium minimalist merch designed for deep work.<\/p>",
+=======
+            "text": "Tools for students, creators, developers, and ambitious people trying to improve their lives.",
+>>>>>>> ca76577ca19cdef7217b8751b793dfb2922440f1
             "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
+<<<<<<< HEAD
             "button_label_1": "Browse apps",
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
             "button_label_2": "Shop merch",
             "button_link_2": "shopify://collections/all",
             "button_style_secondary_2": true
+=======
+            "button_label_1": "View all",
+            "button_link_1": "shopify://collections/frontpage",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+>>>>>>> ca76577ca19cdef7217b8751b793dfb2922440f1
           }
         }
       },
@@ -35,32 +61,101 @@
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
+        "image": "shopify://shop_images/tablet-lays-on-a-white-table-with-screen-lit-by-app-icons.jpg",
+        "image_overlay_opacity": 50,
+        "image_height": "medium",
+        "image_behavior": "fixed",
+        "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
+<<<<<<< HEAD
         "color_scheme": "scheme-4",
         "mobile_content_alignment": "center",
+=======
+        "show_text_box": false,
+        "color_scheme": "scheme-3",
+>>>>>>> ca76577ca19cdef7217b8751b793dfb2922440f1
         "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
         "show_text_below": false
       }
     },
+<<<<<<< HEAD
     "featured_apps": {
       "type": "feature-grid",
+=======
+    "tsapb_fc33c254_L6Ht98": {
+      "type": "tsapb-fc33c254",
+      "blocks": {
+        "announcement_mQNg7y": {
+          "type": "announcement",
+          "settings": {
+            "title": "New Apps Coming Soon",
+            "text_link": "",
+            "text_alternative_font": false,
+            "text_font": "sans_serif_n4"
+          }
+        },
+        "announcement_krpzgp": {
+          "type": "announcement",
+          "settings": {
+            "title": "New Apps Coming Soon",
+            "text_link": "",
+            "text_alternative_font": false,
+            "text_font": "sans_serif_n4"
+          }
+        },
+        "announcement_ULHqr8": {
+          "type": "announcement",
+          "settings": {
+            "title": "New Apps Coming Soon",
+            "text_link": "",
+            "text_alternative_font": false,
+            "text_font": "sans_serif_n4"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_mQNg7y",
+        "announcement_krpzgp",
+        "announcement_ULHqr8"
+      ],
+      "name": "❤️ Square: Rotating Text Bar",
+      "settings": {
+        "rotating_bar_layout": "auto-rotating",
+        "rotating_bar_speed": "30",
+        "rotating_bar_height": "medium",
+        "text_size": "16",
+        "text_style": "regular",
+        "text_color": "#ffffff",
+        "section_background": "color",
+        "rotating_bar_background": "#222222",
+        "section_gradient": "linear-gradient(to right, #fed951, #ff46c7)",
+        "vertical_margin": 0,
+        "vertical_margin_mobile": 0
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+>>>>>>> ca76577ca19cdef7217b8751b793dfb2922440f1
       "blocks": {
         "devflow": {
           "type": "feature_card",
           "settings": {
+<<<<<<< HEAD
             "heading": "DevFlow Pro",
             "text": "A distraction-free terminal environment with built-in Pomodoro and Git automation.",
             "link": "shopify://collections/all",
             "link_label": "Get license"
+=======
+            "heading": "Ziyu Development",
+            "heading_size": "h1"
+>>>>>>> ca76577ca19cdef7217b8751b793dfb2922440f1
           }
         },
         "metricnode": {
           "type": "feature_card",
           "settings": {
+<<<<<<< HEAD
             "heading": "MetricNode",
             "text": "Real-time server monitoring visualized through a minimalist ASCII-style dashboard.",
             "link": "shopify://collections/all",
@@ -74,6 +169,9 @@
             "text": "Generate complex database architectures using simple Markdown syntax.",
             "link": "shopify://collections/all",
             "link_label": "Deploy now"
+=======
+            "text": "<p>Ziyu Development is an independent software brand focused on building modern apps that help people stay productive, organized, and motivated. We create tools designed to simplify everyday life through clean design and practical functionality.</p>"
+>>>>>>> ca76577ca19cdef7217b8751b793dfb2922440f1
           }
         }
       },
@@ -83,6 +181,7 @@
         "schemagen"
       ],
       "settings": {
+<<<<<<< HEAD
         "heading": "Featured Apps",
         "subheading": "A curated set of developer tools built for modern solo workflows.",
         "button_label": "View all systems",
@@ -105,15 +204,110 @@
         "heading_size": "h2",
         "collection": "all",
         "products_to_show": 4,
-        "columns_desktop": 4,
+=======
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "featured_product_bUpqbn": {
+      "type": "featured-product",
+      "blocks": {
+        "text_qDTFtC": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_xARKf7": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_LmrgtT": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_bHd4AG": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_wFHDew": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_xTywQR": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_pbNHpa": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_qDTFtC",
+        "title_xARKf7",
+        "price_LmrgtT",
+        "variant_picker_bHd4AG",
+        "quantity_selector_wFHDew",
+        "buy_buttons_xTywQR",
+        "share_pbNHpa"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "garden-your-goals",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "frontpage",
+        "products_to_show": 8,
+        "title": "APPs in Progress",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+>>>>>>> ca76577ca19cdef7217b8751b793dfb2922440f1
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
         "show_view_all": false,
-        "swipe_on_mobile": false,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
+        "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "quick_add": "none",
         "columns_mobile": "2",
+<<<<<<< HEAD
         "padding_top": 28,
         "padding_bottom": 36
       }
@@ -154,10 +348,10 @@
         "background_style": "none",
         "button_label": "",
         "button_link": "",
+=======
+>>>>>>> ca76577ca19cdef7217b8751b793dfb2922440f1
         "swipe_on_mobile": false,
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "padding_top": 36,
+        "padding_top": 28,
         "padding_bottom": 36
       }
     },
@@ -196,10 +390,18 @@
     }
   },
   "order": [
+<<<<<<< HEAD
     "hero",
     "featured_apps",
     "best_sellers",
     "trusted",
     "join_fleet"
+=======
+    "image_banner",
+    "tsapb_fc33c254_L6Ht98",
+    "rich_text",
+    "featured_product_bUpqbn",
+    "featured_collection"
+>>>>>>> ca76577ca19cdef7217b8751b793dfb2922440f1
   ]
 }
