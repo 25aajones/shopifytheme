@@ -10,50 +10,11 @@
 {
   "sections": {
     "hero": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Software Meets Lifestyle.",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>A curated ecosystem for the modern solo developer. High-performance software tools paired with premium minimalist merch designed for deep work.</p><p><a href=\"shopify://collections/all\" class=\"button\">Browse apps</a> <a href=\"shopify://collections/all\" class=\"button button--secondary\">Shop merch</a></p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
+      "type": "homepage-hero",
       "settings": {
-        "image": "shopify://shop_images/tablet-lays-on-a-white-table-with-screen-lit-by-app-icons.jpg",
-        "height": "large",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "scheme-4",
         "color_scheme": "scheme-4",
         "padding_top": 72,
         "padding_bottom": 48
-      }
-    },
-    "status_chips": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<style>\n.status-chip-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin: 0 auto; max-width: 90rem; }\n.status-chip { display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1rem; border-radius: 999px; background: rgba(255, 255, 255, 0.05); color: #ffffff; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; border: 1px solid rgba(255,255,255,0.08); }\n@media (max-width: 749px) { .status-chip-row { justify-content: center; } }\n</style>\n<div class=\"status-chip-row\">\n<span class=\"status-chip\">VIRTUAL_DB</span>\n<span class=\"status-chip\">HEX_GRID</span>\n<span class=\"status-chip\">NULL_POINTER</span>\n<span class=\"status-chip\">LATE_NIGHT_LOGIC</span>\n<span class=\"status-chip\">SYNTAX_ERROR</span>\n</div>",
-        "color_scheme": "scheme-4",
-        "padding_top": 20,
-        "padding_bottom": 20
       }
     },
     "featured_apps": {
@@ -129,44 +90,9 @@
       }
     },
     "trusted": {
-      "type": "multicolumn",
-      "blocks": {
-        "testimonial": {
-          "type": "column",
-          "settings": {
-            "title": "Trusted by Solo Architects.",
-            "text": "<p>\"The DevFlow license paid for itself in a week. The minimalist merch is just a bonus — it’s become my uniform for shipping code.\"<br><strong>Marcus Knight</strong>, Full-stack Indie Maker</p><p>\"Finally a brand that gets the aesthetic of deep work. No bloat, just high-quality assets for the digital craft.\"<br><strong>Sarah Lin</strong>, Design Founder</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "stat": {
-          "type": "column",
-          "settings": {
-            "title": "99.9%",
-            "text": "<p>Uptime satisfaction across our community of solo makers.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "testimonial",
-        "stat"
-      ],
+      "type": "homepage-testimonials",
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": false,
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
+        "color_scheme": "scheme-4",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -207,7 +133,6 @@
   },
   "order": [
     "hero",
-    "status_chips",
     "featured_apps",
     "best_sellers",
     "trusted",

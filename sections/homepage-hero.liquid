@@ -1,0 +1,182 @@
+<section class="homepage-hero section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width homepage-hero__grid">
+    <div class="homepage-hero__copy">
+      <span class="homepage-hero__pill">STATUS: DEPLOYING MASTERY</span>
+      <h1 class="homepage-hero__title">Software Meets Lifestyle.</h1>
+      <div class="homepage-hero__description">
+        <p>A curated ecosystem for the modern solo developer. High-performance software tools paired with premium minimalist merch designed for deep work.</p>
+      </div>
+      <div class="homepage-hero__actions">
+        <a href="/collections/all" class="button button--primary">Browse apps</a>
+        <a href="/collections/all" class="button button--secondary">Shop merch</a>
+      </div>
+    </div>
+
+    <div class="homepage-hero__panel">
+      <div class="hero-panel">
+        <div class="hero-panel__top">
+          <span class="hero-panel__status">ACTIVE SESSION</span>
+          <span class="hero-panel__timer">02:45:22</span>
+        </div>
+        <div class="hero-panel__body">
+          <div class="hero-panel__label">Active Session</div>
+          <div class="hero-panel__track">
+            <div class="hero-panel__track-fill"></div>
+          </div>
+          <div class="hero-panel__info">
+            <span>Deep work mode</span>
+            <span>Master tracking</span>
+          </div>
+        </div>
+        <div class="hero-panel__footer">
+          <span class="hero-panel__footer-label">ACTIVE SESSION</span>
+          <span class="hero-panel__footer-value">ONLINE</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.homepage-hero__grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(0, 1.3fr) minmax(24rem, 1fr);
+  align-items: center;
+}
+.homepage-hero__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  margin-bottom: 1.5rem;
+}
+.homepage-hero__title {
+  margin: 0 0 1.2rem;
+  font-size: clamp(3.4rem, 5vw, 5rem);
+  line-height: 0.95;
+  max-width: 14ch;
+}
+.homepage-hero__description p {
+  max-width: 42rem;
+  margin: 0 0 2rem;
+  color: rgba(255,255,255,0.8);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+.homepage-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.hero-panel {
+  display: grid;
+  gap: 1.75rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 2rem;
+  padding: 2rem;
+  min-width: 100%;
+}
+.hero-panel__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.hero-panel__status,
+.hero-panel__footer-label {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.hero-panel__timer,
+.hero-panel__footer-value {
+  color: #fff;
+  font-weight: 700;
+}
+.hero-panel__body {
+  display: grid;
+  gap: 1rem;
+}
+.hero-panel__label {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.75);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.hero-panel__track {
+  width: 100%;
+  height: 0.85rem;
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+}
+.hero-panel__track-fill {
+  width: 75%;
+  height: 100%;
+  background: linear-gradient(90deg, #94f3ff 0%, #72d2ff 100%);
+  border-radius: 999px;
+}
+.hero-panel__info {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.95rem;
+}
+.hero-panel__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(0,0,0,0.15);
+  border-radius: 1.5rem;
+}
+@media (max-width: 1024px) {
+  .homepage-hero__grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Homepage hero",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-4"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 140,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 140,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 48
+    }
+  ]
+}
+{% endschema %}

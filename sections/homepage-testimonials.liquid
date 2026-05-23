@@ -1,0 +1,125 @@
+<section class="homepage-testimonials section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width homepage-testimonials__grid">
+    <div class="homepage-testimonials__content">
+      <h2 class="homepage-testimonials__title">Trusted by Solo Architects.</h2>
+      <div class="testimonial-card">
+        <p class="testimonial-card__quote">“The DevFlow license paid for itself in a week. The minimalist merch is just a bonus — it’s become my uniform for shipping code.”</p>
+        <p class="testimonial-card__author"><strong>Marcus Knight</strong>, Full-stack Indie Maker</p>
+      </div>
+      <div class="testimonial-card testimonial-card--secondary">
+        <p class="testimonial-card__quote">“Finally a brand that gets the aesthetic of deep work. No bloat, just high-quality assets for the digital craft.”</p>
+        <p class="testimonial-card__author"><strong>Sarah Lin</strong>, Design Founder</p>
+      </div>
+    </div>
+
+    <div class="homepage-testimonials__stat">
+      <div class="stat-card">
+        <div class="stat-card__value">99.9%</div>
+        <div class="stat-card__label">UPTIME SATISFACTION</div>
+        <div class="stat-card__stars">★★★★★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.homepage-testimonials__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(20rem, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+.homepage-testimonials__title {
+  margin: 0 0 1.5rem;
+  font-size: clamp(2.5rem, 4vw, 3.75rem);
+  line-height: 1.02;
+}
+.testimonial-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 1.75rem;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+.testimonial-card--secondary {
+  margin-top: 1rem;
+}
+.testimonial-card__quote {
+  margin: 0 0 1.25rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.85;
+}
+.testimonial-card__author {
+  margin: 0;
+  color: rgba(255,255,255,0.74);
+  font-size: 0.95rem;
+}
+.stat-card {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+  min-height: 100%;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 2rem;
+}
+.stat-card__value {
+  font-size: clamp(4rem, 8vw, 6rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 0.95;
+}
+.stat-card__label {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.78);
+  font-size: 0.85rem;
+}
+.stat-card__stars {
+  color: #7df7ff;
+  font-size: 1.4rem;
+  letter-spacing: 0.25em;
+}
+@media (max-width: 1024px) {
+  .homepage-testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Homepage testimonials",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-4"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 140,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 140,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ]
+}
+{% endschema %}
